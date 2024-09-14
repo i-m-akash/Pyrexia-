@@ -7,7 +7,7 @@ const ForgotPassword = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:6005/forgotpassword', { email })
+    axios.post('https://pyrexiaapi.vercel.app/forgotpassword', { email })
         .then(response => {
             console.log(response);
             alert("Password Reset Email Sent")          
