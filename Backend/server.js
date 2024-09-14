@@ -10,8 +10,8 @@ const OAuth2Strategy = require("passport-google-oauth2").Strategy; // Using ES6 
 const express = require( "express");
 const Razorpay = require("razorpay");
 const cors = require("cors");
-require("./db/conn"); // Ensure this points to the correct path of your connection file
-require("dotenv").config(); // Add the missing parentheses to invoke config
+// require("./db/conn"); // Ensure this points to the correct path of your connection file
+// require("dotenv").config(); // Add the missing parentheses to invoke config
 
 
 
@@ -88,22 +88,26 @@ app.get('/api/getkey', (req, res) =>
   res.status(200).json({ key: process.env.RAZORPAY_API_KEY })
 );
 
-//Payment code ends
-const PORT = process.env.PORT;
+// //Payment code ends
+// const PORT = process.env.PORT;
 
 
 
-const clientid = "762044144985-l52175nbuk9gjqghtjgsuhuln3vs2efo.apps.googleusercontent.com";
-const clientsecret = "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";
+const clientid = process.env.CLIENT_ID ;
+const clientsecret =process.env.CLIENT_SECRET;
 
 app.use(cors({
-  origin: "http://localhost:3000",
+  origin: "https://pyrexia-v4v8.vercel.app",
   methods: "GET,POST,PUT,DELETE",
   credentials: true
 }));
 app.use(express.json());
 
 
+
+app.get('/', (req, res) => {
+  res.send('Hello from Vercel!');
+});
 
 const resetTokens = {};
 const verifyTokens = {};
@@ -437,8 +441,8 @@ app.get("/logout", (req, res, next) => {
 
 
 
-app.listen(PORT, () => {
-  console.log(`Server started at port ${PORT}`);
+// app.listen(PORT, () => {
+//   console.log(`Server started at port ${PORT}`);
 
 
-});
+// });
