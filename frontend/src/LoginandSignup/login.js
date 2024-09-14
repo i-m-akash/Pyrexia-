@@ -13,7 +13,7 @@ const Login = () => {
     const handleLogin = async(e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:6005/login', { email, password });
+            const response = await axios.post('https://pyrexiaapi.vercel.app/login', { email, password });
             alert(response.data.message);
             if (response.data.success) {
                 navigate('/'); // redirect to dashboard on successful login
@@ -26,7 +26,7 @@ const Login = () => {
     };
 
     const loginWithGoogle = () => {
-        window.open("http://localhost:6005/auth/google/callback", "_self");
+        window.open("https://pyrexiaapi.vercel.app/auth/google/callback", "_self");
     };
 
     return (
