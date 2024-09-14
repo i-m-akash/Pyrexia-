@@ -12,7 +12,7 @@ const ResetPassword = () => {
   const handleResetPassword = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:6005/resetpassword', { email, token, newPassword });
+      const response = await axios.post('https://pyrexiaapi.vercel.app/resetpassword', { email, token, newPassword });
       alert(response.data.message);
       navigate('/login'); // Redirect to login page after successful password reset
     } catch (err) {
