@@ -24,6 +24,19 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 
+app.use(cors({
+  origin: "https://pyrexia-v4v8.vercel.app",
+  methods: "GET,POST,PUT,DELETE",
+  credentials: true
+}));
+app.use(express.json());
+
+
+
+app.get('/', (req, res) => {
+  res.send('Hello from Vercel!');
+});
+
 
 //Payment code start
 
@@ -95,19 +108,6 @@ app.get('/api/getkey', (req, res) =>
 
 const clientid = process.env.CLIENT_ID ;
 const clientsecret =process.env.CLIENT_SECRET;
-
-app.use(cors({
-  origin: "https://pyrexia-v4v8.vercel.app",
-  methods: "GET,POST,PUT,DELETE",
-  credentials: true
-}));
-app.use(express.json());
-
-
-
-app.get('/', (req, res) => {
-  res.send('Hello from Vercel!');
-});
 
 const resetTokens = {};
 const verifyTokens = {};
