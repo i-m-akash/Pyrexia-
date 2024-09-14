@@ -10,8 +10,8 @@ const OAuth2Strategy = require("passport-google-oauth2").Strategy; // Using ES6 
 const express = require( "express");
 const Razorpay = require("razorpay");
 const cors = require("cors");
-// require("./db/conn"); // Ensure this points to the correct path of your connection file
-// require("dotenv").config(); // Add the missing parentheses to invoke config
+require("./db/conn"); // Ensure this points to the correct path of your connection file
+require("dotenv").config(); // Add the missing parentheses to invoke config
 
 
 
@@ -67,9 +67,9 @@ const paymentVerification = async (req, res) => {
     });
 
     res.redirect(
-      `http://localhost:3000/paymentsuccess?reference=${razorpay_payment_id}`
+      `https://pyrexia-v4v8.vercel.app/paymentsuccess?reference=${razorpay_payment_id}`
     );
-  } else {
+  } else 
     res.status(400).json({
       success: false,
     });
@@ -154,8 +154,8 @@ passport.deserializeUser((user, done) => {
 app.get("/auth/google", passport.authenticate("google", { scope: ["profile", "email"] }));
 
 app.get("/auth/google/callback", passport.authenticate("google", {
-  successRedirect: "http://localhost:3000/",
-  failureRedirect: "http://localhost:3000/notfound"
+  successRedirect: "https://pyrexia-v4v8.vercel.app/",
+  failureRedirect: "https://pyrexia-v4v8.vercel.app/notfound"
 }));
 
 
@@ -187,7 +187,7 @@ app.post('/register', async (req, res) => {
     verifyTokens[email] = { token: verifyToken, expiry: Date.now() + 15 * 60 * 1000 }; // Token expires in 15 minutes
 
     // Create the verification URL
-    const verifyUrl = `http://localhost:3000/emailverification?token=${verifyToken}&email=${encodeURIComponent(email)}`;
+    const verifyUrl = `https://pyrexia-v4v8.vercel.app/emailverification?token=${verifyToken}&email=${encodeURIComponent(email)}`;
     const send_to = email;
     const sent_from = process.env.EMAIL_USER;
     const reply_to = email;
@@ -250,7 +250,7 @@ app.post('/forgotpassword', async (req, res) => {
   const resetToken = crypto.randomBytes(32).toString('hex');
   resetTokens[email] = { token: resetToken, expiry: Date.now() + 15 * 60 * 1000 }; // Token expires in 15 minutes
 
-  const resetUrl = `http://localhost:3000/resetpassword?token=${resetToken}&email=${encodeURIComponent(email)}`;
+  const resetUrl = `https://pyrexia-v4v8.vercel.app/resetpassword?token=${resetToken}&email=${encodeURIComponent(email)}`;
   try {
     const send_to = email;
     const sent_from = process.env.EMAIL_USER;
@@ -320,7 +320,7 @@ app.post('/login', async (req, res) => {
       verifyTokens[email] = { token: verifyToken, expiry: Date.now() + 15 * 60 * 1000 }; // Token expires in 15 minutes
 
       // Create the verification URL
-      const verifyUrl = `http://localhost:3000/emailverification?token=${verifyToken}&email=${encodeURIComponent(email)}`;
+      const verifyUrl = `https://pyrexia-v4v8.vercel.app/emailverification?token=${verifyToken}&email=${encodeURIComponent(email)}`;
       const send_to = email;
       const sent_from = process.env.EMAIL_USER;
       const reply_to = email;
