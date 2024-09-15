@@ -49,6 +49,7 @@ const Footer = () => {
                         <li className='hover:text-blue-600 text-white'><Link to="/legals/code-of-conduct">Code of Conduct</Link></li>
                         <li className='hover:text-blue-600 text-white'><Link to="/legals/refund-policy">Refund Policy</Link></li>
                     </ul>
+        
                 </div>
 
                 <div data-aos="fade-up" className='mt-10 w-[100%] md:w-[100%] lg:w-[100%] order-3 md:order-3 lg:order-3 text-base'>
