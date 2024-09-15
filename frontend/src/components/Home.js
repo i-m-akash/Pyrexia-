@@ -68,12 +68,7 @@ const Home = () => {
         <div><HomeEvent /></div>
         <div><HomeEvent2 /></div>
 
-        {/* Planet Animation and Horizontal Card */}
-        
-          <div className='relative z-10 min-h-screen '>
-            
-              < ProfMessage />
-            </div>
+
           
         <div className='py-4 bg-black'> <FAQ/></div>
         <div className='py-4 bg-black'> <EventSchedule/></div>
