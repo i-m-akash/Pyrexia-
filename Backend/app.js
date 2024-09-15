@@ -1,4 +1,4 @@
-
+require("dotenv").config();
 const session = require( "express-session");
 const passport = require("passport");
 const bcrypt = require( "bcryptjs");
@@ -11,7 +11,7 @@ const express = require( "express");
 const Razorpay = require("razorpay");
 const cors = require("cors");
 require("./db/conn"); // Ensure this points to the correct path of your connection file
-require("dotenv").config(); // Add the missing parentheses to invoke config
+ // Add the missing parentheses to invoke config
 
 const PORT = process.env.PORT;
 
