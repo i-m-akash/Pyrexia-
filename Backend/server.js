@@ -113,7 +113,7 @@ const resetTokens = {};
 const verifyTokens = {};
 
 app.use(session({
-  secret: "1234567jklhyjgklgfd890",
+  secret: process.env.SECRET,
   resave: false,
   saveUninitialized: true,
   cookie: {
