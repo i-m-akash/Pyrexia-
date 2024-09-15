@@ -102,7 +102,7 @@ app.get('/api/getkey', (req, res) =>
 );
 
 // //Payment code ends
-// const PORT = process.env.PORT;
+const PORT = process.env.PORT;
 
 
 
@@ -441,8 +441,8 @@ app.get("/logout", (req, res, next) => {
 
 
 
-// app.listen(PORT, () => {
-//   console.log(`Server started at port ${PORT}`);
+app.listen(PORT, () => {
+  console.log(`Server started at port ${PORT}`);
 
 
-// });
+});
