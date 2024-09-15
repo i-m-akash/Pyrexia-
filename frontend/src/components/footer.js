@@ -16,7 +16,7 @@ const Footer = () => {
                         <img src={img} alt="logo" className='h-20' />
                     </Link>
 
-                    <p className='max-w-[17rem] py-3 text-base text-white'>Pyrexia, is AIIMS Reshikesh's annual fest. </p>
+                    <p className='max-w-[17rem] py-3 text-base text-white'>Pyrexia, is AIIMS Rishikesh's annual fest. </p>
                     <div className='flex gap-3 py-2 '>
                         
                         <a target='_blank' href="https://wa.me/917597240902" className='transition ease-in delay-50 text-green-400 hover:text-green-500 hover:scale-[110%]'>
