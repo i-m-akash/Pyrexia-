@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 require("dotenv").config(); // Load environment variables
 
-const mongoURI = process.env.DATABASE;
+const mongoURI = process.env.MONGO_URI;
 
 if (!mongoURI) {
   throw new Error("MongoDB connection URI is not defined in .env file");
