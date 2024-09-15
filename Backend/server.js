@@ -25,7 +25,7 @@ app.use(express.urlencoded({ extended: true }));
 
 
 app.use(cors({
-  origin: "https://pyrexia-v4v8.vercel.app",
+  origin: "https://pyrexia-v4v8.vercel.app/",
   methods: "GET,POST,PUT,DELETE",
   credentials: true
 }));
