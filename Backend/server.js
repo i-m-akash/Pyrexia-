@@ -13,7 +13,7 @@ const cors = require("cors");
 require("./db/conn"); // Ensure this points to the correct path of your connection file
 require("dotenv").config(); // Add the missing parentheses to invoke config
 
-
+const PORT = process.env.PORT;
 
 const app = express();
 
@@ -25,7 +25,7 @@ app.use(express.urlencoded({ extended: true }));
 
 
 app.use(cors({
-  origin: "https://pyrexia-v4v8.vercel.app/",
+  origin: "https://pyrexia-v4v8.vercel.app",
   methods: "GET,POST,PUT,DELETE",
   credentials: true
 }));
@@ -102,7 +102,7 @@ app.get('/api/getkey', (req, res) =>
 );
 
 // //Payment code ends
-const PORT = process.env.PORT;
+
 
 
 
