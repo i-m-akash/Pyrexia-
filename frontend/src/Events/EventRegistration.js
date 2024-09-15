@@ -18,7 +18,7 @@ const RegistrationForm = () => {
   });
 
   useEffect(() => {
-    axios.get('http://localhost:6005/user', { withCredentials: true })
+    axios.get('https://pyrexiaapi.vercel.app/user', { withCredentials: true })
       .then(response => {
         const email = response.data.user.email;
         setUserEmail(email);
