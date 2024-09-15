@@ -9,7 +9,7 @@ const RegisterEvent = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:5000/register', {
+    axios.post('https://pyrexiaapi.vercel.app/register', {
       eventId,
       userName,
       userEmail,
