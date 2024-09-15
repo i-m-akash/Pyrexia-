@@ -42,7 +42,7 @@ function App() {
           <Route path='/emailverification' element={<EmailVerification />}></Route>
           <Route path="/events" element={<EventPage />}></Route>
           <Route path="/profile" element={<ProtectedRoute element={Profile} />} />
-          <Route path="/registerevent" element={<ProtectedRoute element={RegisterSoon} />} />
+          <Route path="/registerevent" element={<RegisterSoon} />}></Route>
 
 
           <Route path="/paymentsuccess" element={<PaymentSuccess />} />
