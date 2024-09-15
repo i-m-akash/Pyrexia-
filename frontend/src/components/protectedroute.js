@@ -7,7 +7,7 @@ const ProtectedRoute = ({ element: Element, ...rest }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get('http://localhost:6005/login/success', { withCredentials: true })
+    axios.get('https://pyrexiaapi.vercel.app/login/success', { withCredentials: true })
       .then(response => {
         if (response.data.success) {
           setIsAuthenticated(true);
