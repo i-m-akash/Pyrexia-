@@ -6,8 +6,8 @@ const Payment = () => {
     console.log("Amount received:", amount); // Debug statement
   
     try {
-      const { data: { key } } = await axios.get("http://localhost:6005/api/getkey");
-      const { data: { order } } = await axios.post("http://localhost:6005/api/checkout", { amount });
+      const { data: { key } } = await axios.get("https://pyrexiaapi.vercel.app/api/getkey");
+      const { data: { order } } = await axios.post("https://pyrexiaapi.vercel.app/api/checkout", { amount });
   
       console.log("Order received:", order); // Debug statement
   
@@ -19,7 +19,7 @@ const Payment = () => {
         description: "Aiims Rishikesh Fest",
         image: "https://avatars.githubusercontent.com/u/25058652?v=4",
         order_id: order.id,
-        callback_url: "http://localhost:6005/api/paymentverification",
+        callback_url: "https://pyrexiaapi.vercel.app/api/paymentverification",
         prefill: {
           name: "Gaurav Kumar",
           email: "gaurav.kumar@example.com",
