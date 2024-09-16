@@ -520,7 +520,7 @@ const EventPage = () => {
         title: "Fantasy Faces",
         registrationFees: "₹100 per team",
         status: "Inactive",
-        image: "https://example.com/subevent1_1.jpg",
+        image: "",
         tagline: 'Transforming faces, from blank canvases to living art!',
         description: "Prepare to witness a kaleidoscope of colours, dazzling designs, and artistic mastery as participants transform faces into mesmerizing works of art.",
         teamSize: "",
@@ -537,7 +537,8 @@ const EventPage = () => {
         date: '10-Oct-2024',
         venue: 'Mini Audi',
         time: '10:30AM- 12:30 PM',
-        rulebook: ""
+        rulebook: "https://drive.google.com/file/d/1NrMerwfHuF9ouFYzvTwyEwfY6DRCgFZU/view?usp=drive_link",
+        link:"https://forms.gle/n4dsMxyxBJJFJAeV6"
       },
 
       {
@@ -561,7 +562,8 @@ const EventPage = () => {
         date: '10-Oct-2024',
         venue: 'Mini Audi',
         time: '1:30-3:00 PM',
-        rulebook: ""
+        rulebook: "",
+        link:"https://forms.gle/pk2yhd9K5BiNkTd46"
       },
       {
         title: "Brushless Strokes",
@@ -584,7 +586,8 @@ const EventPage = () => {
         date: '11-Oct-2024',
         venue: 'Mini Audi',
         time: '1:30-3:30 PM',
-        rulebook: ""
+        rulebook: "",
+        link:"https://forms.gle/btLcQrAa4UhATvZu7"
       },
       {
         title: "Acrylic Odyssey",
@@ -607,7 +610,8 @@ const EventPage = () => {
         date: '10:00AM- 12:30 PM',
         venue: 'Mini Audi',
         time: '12-Oct-2024',
-        rulebook: ""
+        rulebook: "",
+        link:"https://forms.gle/zPt19DUj3Cwadj2X8"
       },
 
       {
@@ -631,7 +635,8 @@ const EventPage = () => {
         date: '12-Oct-2024',
         venue: 'Mini Audi',
         time: '1:30-3:30 PM',
-        rulebook: ""
+        rulebook: "",
+        link:"https://forms.gle/ZuzAqzwXXcsno4vG7"
       },
       {
         title: "Contrast Chronicles",
@@ -654,7 +659,8 @@ const EventPage = () => {
         date: '13-Oct-2024',
         venue: 'Mini audi',
         time: '1:30-3:00 PM',
-        rulebook: ""
+        rulebook: "",
+        link:"https://forms.gle/JLJ9GakYVRPPYcKH9"
       },
 
       {
@@ -678,7 +684,8 @@ const EventPage = () => {
         date: '  14-Oct-2024 ',
         venue: 'Mini Audi',
         time: '10:00AM- 12:00 PM',
-        rulebook: ""
+        rulebook: "",
+        link:"https://forms.gle/WUT3S18HVhiRSgHh7"
       },
       {
         title: "Mehendi Mania",
@@ -701,7 +708,8 @@ const EventPage = () => {
         date: ' 14-Oct-2024 ',
         venue: 'Mini Audi',
         time: '1:30PM- 3:00 PM',
-        rulebook: ""
+        rulebook: "",
+        link:"https://forms.gle/VLECJmo986s7MK6Y9"
       },
       {
         title: "Brush Of Pebbles",
@@ -724,7 +732,8 @@ const EventPage = () => {
         date: '14-Oct-2024',
         venue: 'Mini Audi',
         time: '3:15PM- 5:15PM',
-        rulebook: ""
+        rulebook: "",
+        link:""
       },
 
     ],
@@ -1337,13 +1346,13 @@ const EventPage = () => {
         date: '',
         venue: '',
         time: '',
-        rulebook: "https://drive.google.com/file/d/1iwrVdEmrzlnQLJuGyNalTCw2F76s8ryf/view?usp=drive_link"
+        rulebook: "https://drive.google.com/file/d/1iwrVdEmrzlnQLJuGyNalTCw2F76s8ryf/view?usp=drive_link",link:""
       },
       {
         title: "FIFA",
         registrationFees: "Rs 180/-",
         status: "Inactive",
-        image: "https://example.com/subevent1_1.jpg",
+        image: "",
         tagline: '',
         description: "Knockout FIFA matches with winners from each pool advancing to the finals.",
         teamSize: "",
@@ -1360,13 +1369,14 @@ const EventPage = () => {
         date: '',
         venue: '',
         time: '',
-        rulebook: "https://drive.google.com/file/d/1Nh-C3Div0TMFjYe-oF96BMwCWCnaraCf/view?usp=drive_link"
+        rulebook: "https://drive.google.com/file/d/1Nh-C3Div0TMFjYe-oF96BMwCWCnaraCf/view?usp=drive_link",
+        link:""
       },
       {
         title: "BGMI (BATTLE ROYALE)",
         registrationFees: "₹400 per team",
         status: "Inactive",
-        image: "https://example.com/subevent1_1.jpg",
+        image: "",
         tagline: '',
         description: "BGMI tournament with league stage and final round, top 16 teams advance to final.",
         teamSize: "",
@@ -1389,7 +1399,7 @@ const EventPage = () => {
         title: "BGMI (TEAM DEATH MATCH)",
         registrationFees: "₹200 per team",
         status: "Inactive",
-        image: "https://example.com/subevent1_1.jpg",
+        image: "",
         tagline: '',
         description: "BGMI Team Death Match with 4 players per team, first team to 40 kills wins.",
         teamSize: "",
