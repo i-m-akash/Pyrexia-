@@ -26,7 +26,7 @@ const Login = () => {
     };
 
     const loginWithGoogle = () => {
-        window.open("https://pyrexiaapi.vercel.app/auth/google/callback", "_self");
+        window.open("https://pyrexia-backend.onrender.com/auth/google/callback", "_self");
     };
 
     return (
