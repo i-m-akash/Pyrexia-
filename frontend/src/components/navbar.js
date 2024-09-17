@@ -9,7 +9,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    axios.get('http://localhost:6005/login/success', { withCredentials: true })
+    axios.get('https://pyrexia-backend.onrender.com/login/success', { withCredentials: true })
       .then(response => {
         if (response.data.success) {
           setIsLoggedIn(true);
@@ -21,7 +21,7 @@ const Navbar = () => {
   }, []);
 
   const handleLogout = () => {
-    axios.get('http://localhost:6005/logout', { withCredentials: true })
+    axios.get('https://pyrexia-backend.onrender.com/logout', { withCredentials: true })
       .then(response => {
         if (response.data.success) {
           setIsLoggedIn(false);
