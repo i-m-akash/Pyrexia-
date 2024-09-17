@@ -43,7 +43,7 @@ function App() {
           <Route path="/events" element={<EventPage />}></Route>
           <Route path="/profile" element={<ProtectedRoute element={Profile} />} />
           <Route path="/registerevent" element={<RegisterSoon} />}></Route>
-   <Route path="/" element={<RegisterSoon} />}></Route>
+
 
 
           <Route path="/paymentsuccess" element={<PaymentSuccess />} />
