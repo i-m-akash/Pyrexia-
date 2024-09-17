@@ -67,7 +67,7 @@ function Signup() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post('https://pyrexiaapi.vercel.app/register', { name, email, password })
+        axios.post('https://pyrexia-backend.onrender.com/register', { name, email, password })
     .then(response => {
         console.log(response);
         alert(response.data.message)
