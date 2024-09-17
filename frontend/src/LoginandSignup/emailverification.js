@@ -12,7 +12,7 @@ const EmailVerification = () => {
   useEffect(() => {
     const verifyEmail = async () => {
       try {
-        const response = await axios.post('https://pyrexiaapi.vercel.app/emailverification', { email, token });
+        const response = await axios.post('https://pyrexia-backend.onrender.com/emailverification', { email, token });
         setMessage(response.data.message);
       } catch (err) {
         setMessage(err.response?.data?.error || 'An error occurred');
