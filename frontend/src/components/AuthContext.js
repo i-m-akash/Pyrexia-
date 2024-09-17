@@ -9,7 +9,7 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     const checkAuth = async () => {
       try {
-        const response = await axios.get('http://localhost:6005/login/success', { withCredentials: true });
+        const response = await axios.get('https://pyrexia-backend.onrender.com/login/success', { withCredentials: true });
         setIsAuthenticated(response.data.success);
       } catch (error) {
         setIsAuthenticated(false);
