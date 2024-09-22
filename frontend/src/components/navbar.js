@@ -4,29 +4,34 @@ import axios from 'axios';
 import img from "../Images/logo.webp";
 
 const Navbar = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState();
+  const [isLoggedIn, setIsLoggedIn] = useState(null); // Initialize as null
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     axios.get('https://pyrexia-backend.onrender.com/login/success', { withCredentials: true })
       .then(response => {
-        if (response.data.success) {
+        if (response?.data?.success) {  // Optional chaining
           setIsLoggedIn(true);
+        } else {
+          setIsLoggedIn(false);
         }
       })
       .catch(() => {
-        setIsLoggedIn(false);
+        setIsLoggedIn(false);  // Ensure fallback to logged-out state on error
       });
   }, []);
 
   const handleLogout = () => {
     axios.get('https://pyrexia-backend.onrender.com/logout', { withCredentials: true })
       .then(response => {
-        if (response.data.success) {
+        if (response?.data?.success) {  // Optional chaining
           setIsLoggedIn(false);
-          navigate("/");
+          navigate("/");  // Redirect to home after logout
         }
+      })
+      .catch(error => {
+        console.error("Error during logout:", error);
       });
   };
 
@@ -36,7 +41,6 @@ const Navbar = () => {
     <>
       <a href="/" className={buttonClasses}>Home</a>
       <a href="/events" className={buttonClasses}>Events</a>
-      {/* <a href="/profile" className={buttonClasses}>Profile</a> */}
       <a href="/starnight" className={buttonClasses}>Star Night</a>
       <a href="https://drive.google.com/file/d/12CP4PlhrVhJ4Hi_NVYIhn5B-wWi2q3kr/view?usp=drive_link" className={buttonClasses}>Brochure</a>
       <button onClick={handleLogout} className={buttonClasses}>Logout</button>
@@ -52,14 +56,14 @@ const Navbar = () => {
       <a href="/login" className={buttonClasses}>Login</a>
     </>
   );
-  
+
   return (
-    <nav className='bg-[#001f3f] text-white fixed top-0 left-0 w-full z-30 position-fixed'>
+    <nav className='bg-[#001f3f] text-white fixed top-0 left-0 w-full z-30'>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='flex items-center justify-between h-16'>
           <div className='flex flex-row w-full justify-between'>
             <div className='text-xl font-bold font-sans-serif poppins'>
-              <img  className='mt-3 w-32 h-auto autoload' src={img} alt="img1" />
+              <img className='mt-3 w-32 h-auto autoload' src={img} alt="Logo" />
             </div>
             <div className='hidden md:block'>
               <div className='mt-14 flex ml-10 items-baseline space-x-4'>
